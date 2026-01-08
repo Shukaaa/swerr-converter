@@ -1,0 +1,31 @@
+{
+  "name": "@swerr/converter",
+  "version": "0.0.1",
+  "description": "Bundle of converters to transform Swerr source files into different documentation formats.",
+  "type": "module",
+  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "default": "./dist/index.js",
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "keywords": [],
+  "author": "Shukaaa",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^24.3.2",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@swerr/core": "^0.0.4"
+  },
+  "files": [
+    "dist"
+  ]
+}

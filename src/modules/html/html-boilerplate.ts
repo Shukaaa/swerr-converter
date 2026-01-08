@@ -1,0 +1,115 @@
+import {SwerrScheme} from "@swerr/core";
+import {HtmlConverterConfig} from "./html-converter-config.js";
+
+export const htmlBoilerplate = (config: HtmlConverterConfig, scheme: SwerrScheme) => {
+	return `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Swerr Error Catalog - ${scheme.name} ${scheme.version}</title>
+<style>
+        :root {
+            --primary-color: #D72323;
+            --background-color: #000000;
+            --background-color-depth: #151414;
+            --border-color: #454545;
+            --text-color: #F5EDED;
+        }
+
+        ::-moz-selection {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        ::selection {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 20px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--background-color-depth);
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border: 2px solid var(--primary-color);
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--primary-color);
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+	<main>
+			<h1>Swerr Error Documentation / Catalog</h1>
+			<h4>${scheme.name} v${scheme.version}</h4>
+			<p>${scheme.description}</p>
+			<h2>Error Catalog</h2>
+			<table border="1" cellpadding="5" cellspacing="0">
+				<tr>
+					<th>Error</th>
+					<th>Description</th>
+				</tr>
+				${scheme.errors.map(error => `
+				<tr>
+					<td>${error.name}</td>
+					<td>${error.description}</td>
+				</tr>
+				`).join('')}
+			</table>
+	</main>
+</body>
+</html>
+`
+}
