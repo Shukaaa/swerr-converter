@@ -4,6 +4,7 @@
   "description": "Bundle of converters to transform Swerr source files into different documentation formats.",
   "type": "module",
   "main": "dist/index.js",
+  "repository": "https://github.com/Shukaaa/swerr-converter",
   "exports": {
     ".": {
       "default": "./dist/index.js",
@@ -15,7 +16,19 @@
     "build": "tsc",
     "watch": "tsc --watch"
   },
-  "keywords": [],
+  "keywords": [
+    "swerr",
+    "errors",
+    "documentation",
+    "api",
+    "jsdoc",
+    "jsdocs",
+    "docs",
+    "converter",
+    "converters",
+    "html",
+    "markdown"
+  ],
   "author": "Shukaaa",
   "license": "ISC",
   "devDependencies": {
@@ -26,6 +39,11 @@
     "@swerr/core": "^0.0.4"
   },
   "files": [
-    "dist"
-  ]
+    "dist",
+    "package.json",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
