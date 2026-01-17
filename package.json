@@ -1,6 +1,6 @@
 {
   "name": "@swerr/converter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Bundle of converters to transform Swerr source files into different documentation formats.",
   "type": "module",
   "main": "dist/index.js",

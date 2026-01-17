@@ -10,7 +10,7 @@ export const htmlConverter = async (config: HtmlConverterConfig, scheme: SwerrSc
 	}
 	
 	const html = htmlBoilerplate(config, scheme);
-	const fileName = config.fileName || "swerr-docs.html";
+	const fileName = config.fileName || "index.html";
 	const outputFilePath = `${config.outputPath}/${fileName}`;
 	
 	if (!fs.existsSync(config.outputPath)) {

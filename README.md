@@ -30,4 +30,4 @@ This command will generate the error documentation based on your JSDoc comments 
 
 ## Documentation
 
-soon...
+https://swerr.apidocumentation.com

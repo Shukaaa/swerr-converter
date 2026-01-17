@@ -11,7 +11,7 @@ export const markdownConverter = async (config: MarkdownConverterConfig, scheme:
 	}
 	
 	const content = createMarkdownContent(scheme);
-	const fileName = config.fileName || "swerr-docs.md";
+	const fileName = config.fileName || "README.md";
 	const outputFilePath = `${config.outputPath}/${fileName}`;
 	
 	if (!fs.existsSync(config.outputPath)) {
