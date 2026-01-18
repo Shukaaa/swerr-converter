@@ -4,6 +4,8 @@ import fs from "node:fs";
 import {HtmlConverterConfig} from "./html-converter-config.js";
 
 export const htmlConverter = async (config: HtmlConverterConfig, scheme: SwerrScheme) => {
+	LogUtils.info("Starting HTML conversion")
+	
 	if (!config.outputPath) {
 		LogUtils.error("No output path specified in the markdown converter configuration.")
 		return;
