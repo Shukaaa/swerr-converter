@@ -1,6 +1,6 @@
-# 0.1 MVP
+# ✅ 0.1 MVP
 - Add github action for versioning and releasing
-- implemet unit tests for converters
+- implement unit tests for converters
 
 # 0.2 Findability & UX
 - HTML: Search functionality for error documentation
