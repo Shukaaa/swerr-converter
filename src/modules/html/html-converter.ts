@@ -1,6 +1,6 @@
 import {LogUtils, SwerrScheme} from "@swerr/core";
 import {htmlBoilerplate} from "./html-boilerplate.js";
-import fs from "node:fs";
+import * as fs from "node:fs";
 import {HtmlConverterConfig} from "./html-converter-config.js";
 
 export const htmlConverter = async (config: HtmlConverterConfig, scheme: SwerrScheme) => {

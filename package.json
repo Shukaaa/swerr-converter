@@ -1,6 +1,6 @@
 {
   "name": "@swerr/converter",
-  "version": "0.0.3",
+  "version": "0.0.0",
   "description": "Bundle of converters to transform Swerr source files into different documentation formats.",
   "type": "module",
   "main": "dist/index.js",
@@ -14,7 +14,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "watch": "tsc --watch"
+    "watch": "tsc --watch",
+    "test": "vitest run"
   },
   "keywords": [
     "swerr",
@@ -32,8 +33,14 @@
   "author": "Shukaaa",
   "license": "ISC",
   "devDependencies": {
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/github": "^12.0.2",
+    "@semantic-release/npm": "^13.1.3",
+    "@semantic-release/release-notes-generator": "^14.1.0",
     "@types/node": "^24.3.2",
-    "typescript": "^5.9.2"
+    "semantic-release": "^25.0.2",
+    "typescript": "^5.9.2",
+    "vitest": "^4.0.17"
   },
   "dependencies": {
     "@swerr/core": "^0.0.4"
