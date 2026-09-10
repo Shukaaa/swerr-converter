@@ -56,7 +56,7 @@ describe("htmlConverter", () => {
 		const writtenPath = (fs.promises.writeFile as any).mock.calls[0][0];
 		const writtenContent = (fs.promises.writeFile as any).mock.calls[0][1];
 		expect(writtenPath).toBe("/out/path/DOC.html");
-		expect(writtenContent).toContain("<h1>Swerr Error Documentation / Catalog");
+		expect(writtenContent).toContain("<h1>MyScheme Error Catalog</h1>");
 		expect((LogUtils as any).success).toHaveBeenCalled();
 	});
 	
